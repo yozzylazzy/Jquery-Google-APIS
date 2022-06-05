@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Hide DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>This Is A Test Of JQuery</h1>
+        <p>If you click on me, I will disappear.</p>
+        <p>Click me away!</p>
+        <p>Click me too!</p>
+        <button id="button" class="btn button-primary">Show The Alert</button>
+        <button id="hide" class="btn button-primary">Hide The Alert</button>
+        <div id="alert" class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide();
+            });
+        });
+
+        //Struktur jQuery (Syntax) :
+        //$(selector).action()
+        /*
+        A $ sign to define/access jQuery
+        A (selector) to "query (or find)" HTML elements
+        A jQuery action() to be performed on the element(s)
+        */
+        $(document).ready(function () {
+            $("h1").click(function () {
+                $(this).hide();
+            });
+        });
+
+        //Show dan hide Alert Pake Button
+        $("document").ready(function(){
+            $("#button").click(function(){
+                $("#alert").show();
+            });
+        });
+
+        $("document").ready(function(){
+            $("#hide").click(function(){
+                $("#alert").hide();
+            });
+        });
+    </script>
+</body>
+
+</html>
